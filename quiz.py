@@ -30,12 +30,14 @@ class ClassStudent(Student):
         return self.__avg
 
 def all_sum(some_list:list):
-    if isinstance(some_list[0], int):
+    if some_list and isinstance(some_list[0], int):
         return sum(some_list)
-    else:
+    elif some_list:
         for idx, x in enumerate(some_list):
             some_list[idx] = int(x)
         return sum(some_list)
+    else:
+        return False
 
 test_a = ClassStudent("chan", 28, 95)
 list_a = [test_a, ClassStudent("bob", 28, 90), ClassStudent("mo", 28, 80)]
