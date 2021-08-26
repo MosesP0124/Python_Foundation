@@ -20,11 +20,7 @@ class ClassStudent(Student):
 
     def get_name(self):
         return self.name + "woo"
-
     @property
-    def avg(self):
-        return self.__avg
-    @avg.getter
     def avg(self):
         return self.__avg
     @avg.setter
