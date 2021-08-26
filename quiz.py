@@ -1,37 +1,37 @@
 class Student:
     def __init__(self,name,age):
         self.name = name
-        self._age = age
+        self.__age = age
 
     def get_name(self):
         return self.name
     @property
     def age(self):
-        return self._age
+        return self.__age
     @age.setter
     def age(self, age):
-        self._age = age
+        self.__age = age
 
 
 class ClassStudent(Student):
     def __init__(self, name, age, avg):
         super().__init__(name, age)
-        self._avg = avg
+        self.__avg = avg
 
     def get_name(self):
         return self.name + "woo"
 
     @property
     def avg(self):
-        return self._avg
+        return self.__avg
     @avg.getter
     def avg(self):
-        return self._avg
+        return self.__avg
     @avg.setter
     def avg(self, avg):
-        self._avg = avg + 20
+        self.__avg = avg + 20
     def __int__(self):
-        return self._avg
+        return self.__avg
 
 def all_sum(some_list:list):
     if isinstance(some_list[0], int):
@@ -52,5 +52,5 @@ test_a.age = 38
 print("5. test_a.age:", test_a.age)
 test_a.avg = 10
 print("6. test_a.avg:", test_a.avg)
-test_a._avg = 20
+test_a.__avg = 20
 print("7. test_a.avg:", test_a.avg)
