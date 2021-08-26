@@ -44,7 +44,7 @@ list_a = [test_a, ClassStudent("bob", 28, 90), ClassStudent("mo", 28, 80)]
 
 print("1. test_a.get_name():", test_a.get_name())
 print("2. test_a.age:", test_a.age)
-print("3. test_a.avg():", test_a.avg)
+print("3. test_a.avg:", test_a.avg)
 print("4. all_sum(list_a):", all_sum(list_a))
 test_a.age = 38
 print("5. test_a.age:", test_a.age)
